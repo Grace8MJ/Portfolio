@@ -1261,6 +1261,11 @@ input[type='checkbox'] {
 /****************************/
 /*     13. Testimonials     */
 /****************************/
+.swiper-slide{
+	align-items: center;
+	justify-content: center;
+}
+
 .slider-2 {
 	padding-top: 7.5rem;
 	padding-bottom: 7rem;
