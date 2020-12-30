@@ -296,10 +296,10 @@
 
                 <h3>Contact</h3>
                 <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-                    <div class="row">
-                        <p>gracemj805@gmail.com</p>
-                    </div>
-                    <button href="#" class="btn btn-border" onclick="copy_to_clipboard()" type="submit">Hire Me <span class="glyphicon glyphicon-send"></span></button>
+                <div class="row">
+                    <p id="p1">gracemj805@gmail.com</p>
+                </div>
+                <button class="btn btn-border" onclick="copyToClipboard('p1')">Hire Me <span class="glyphicon glyphicon-send"></span></button>
             </div>
         </section><!-- /.section-form -->
 
@@ -445,15 +445,16 @@
     <script src="assets/js/script.js"></script>
 
     <script>
-        function copy_to_clipboard() {    
-            var copyText = "gracemj805@gmail.com";
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            document.execCommand("Copy");
-            alert("Copied E-mail Address to the Clipboard. Thank you!");
+        function copyToClipboard(elementId){
+            var aux = document.createElement("input");
+            aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+            document.body.appendChild(aux);
+            aux.select();
+            document.execCommand("copy");
+            document.body.removeChild(aux);
+            alert("Copied E-mail Address to the Clipboard. Please e-mail me. Thank you!");
         }
     </script>
-        
-  
+
 </body>
 </html>
