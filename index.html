@@ -297,10 +297,9 @@
                 <h3>Contact</h3>
                 <img src="assets/img/lines.svg" class="img-lines" alt="lines">
                     <div class="row">
-                        <p>ejlove927@naver.com</p>
                         <p>gracemj805@gmail.com</p>
                     </div>
-                    <span class="glyphicon glyphicon-send">Hire Me </span>
+                    <button class="btn btn-border" onclick="copy_to_clipboard()"></button><span class="glyphicon glyphicon-send">Hire Me </span>
             </div>
         </section><!-- /.section-form -->
 
@@ -444,6 +443,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
     <script src="assets/js/jquery.countTo.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+        function copy_to_clipboard() {    
+            var copyText = "gracemj805@gmail.com";
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("Copy");
+            alert("Copied E-mail Address to the Clipboard. Thank you!");
+        }
+    </script>
+        
   
 </body>
 </html>
